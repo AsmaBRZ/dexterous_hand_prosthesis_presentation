@@ -1,0 +1,274 @@
+\documentclass[french]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\title{Pilotage de drone à l'aide de coordonnées GPS}
+\author{
+  ARIOUAT, Sofiane\\
+  \and
+  BRAZI, Asma\\
+  \and
+  \\Encadré par: Mr KORDON Fabrice\\
+}
+\institute{Sorbonne Université} 
+\date{\today}
+
+
+
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Table des matières}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+  
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}[fragile]{La révolution des drones}
+ \begin{columns}
+\begin{column}{0.5\textwidth}
+   Pour quelle raison portons-nous une attention particulière aux drones?
+\end{column}
+\begin{column}{0.5\textwidth} 
+    \begin{center}
+     \includegraphics[width=1\textwidth]{intro_drone.png}
+     \end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{La révolution des drones}
+
+\begin{columns}
+\column{0.5\textwidth}
+\begin{minipage}[c][0.4\textheight][c]{\linewidth}
+  \centering
+  
+  \includegraphics[width=0.8\linewidth]{drone_agriculture.jpg} 
+\end{minipage}
+\begin{minipage}[c][0.4\textheight][c]{\linewidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{drone_pro.jpg} 
+\end{minipage}
+\column{0.5\textwidth}
+\begin{minipage}[c][0.4\textheight][c]{\linewidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{drone_marine.jpg} 
+\end{minipage}
+\begin{minipage}[c][0.4\textheight][c]{\linewidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{drone_militaire.jpg} 
+\end{minipage}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[fragile]{La futur des drones}
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{drone_future.jpg} 
+\\
+
+Que nous réservent les drones dans le futur?
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Objectif du projet}
+\begin{figure}
+\includegraphics[width=1.1\linewidth]{architecture_generale.png} 
+\end{figure}
+\begin{figure}
+\includegraphics[width=0.05\linewidth]{goal.png} 
+ Réaliser une application graphique permettant à l'utilisateur d’interagir avec le drone
+\end{figure}
+\end{frame}
+
+
+\section{Analyse des besoins et conception}
+
+
+
+\begin{frame}{Analyse et spécification des besoins}
+\begin{figure}
+ \includegraphics[width=0.8\linewidth]{usegeneral.png}
+ \caption{Diagramme de cas d'utilisation global}
+ \end{figure}
+\end{frame}
+
+\begin{frame}{Architecture du système}
+\begin{figure}
+ \includegraphics[width=0.9\linewidth]{deroulement.png}
+ \caption{Diagramme de cas d'utilisation global}
+ \end{figure}
+\end{frame}
+
+\section{Implémentation et réalisation du système}
+
+\begin{frame}{Matériel utilisé}
+\textbf{Parrot SDK}
+\\
+\begin{figure}
+ \includegraphics[width=0.4\linewidth]{parrot.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Développement drone}
+\textbf{MavLink}
+\\
+\begin{figure}
+ \includegraphics[width=0.4\linewidth]{mavlink.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Développement drone}
+\textbf{FTP}
+\\
+\begin{figure}
+ \includegraphics[width=0.9\linewidth]{ftp.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Développement drone}
+\textbf{Mode de fonctionnement}
+\end{frame}
+
+
+\begin{frame}{Développement web}
+\begin{figure}
+ \includegraphics[width=0.9\linewidth]{dev1.png}
+ \caption{Outils de développement de l'application graphique}
+ \end{figure}
+\end{frame}
+\begin{frame}{Développement web}
+\begin{figure}
+ \includegraphics[width=0.9\linewidth]{ajax_php.png}
+ \caption{Outils de développement de l'application graphique}
+ \end{figure}
+\end{frame}
+
+\begin{frame}{Développement web}
+\begin{figure}
+ \includegraphics[width=0.9\linewidth]{dev2.png}
+ \caption{Outils de développement de l'application graphique}
+ \end{figure}
+\end{frame}
+
+
+\section{Présentation de l’application}
+
+\begin{frame}[fragile]{Présentation du GUI de l’application}
+\begin{figure}
+ \includegraphics[width=1\linewidth]{home.png}
+\caption{Interface graphique: Lancement de l'application}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]{Présentation du GUI de l’application}
+\begin{figure}
+ \includegraphics[width=1\linewidth]{espace.png}
+\caption{Interface graphique: Espace de travail de l'application}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Présentation du GUI de l’application}
+\begin{figure}
+ \includegraphics[width=1\linewidth]{before_drag.png}
+\caption{Interface graphique: Espace de travail de l'application}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Présentation du GUI de l’application}
+\begin{figure}
+ \includegraphics[width=1\linewidth]{drag.png}
+\caption{Interface graphique: Espace de travail de l'application}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Présentation du GUI de l’application}
+\begin{figure}
+ \includegraphics[width=1\linewidth]{drop.png}
+\caption{Interface graphique: Espace de travail de l'application}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Présentation du GUI de l’application}
+\begin{figure}
+ \includegraphics[width=1\linewidth]{filmpart.png}
+\caption{Interface graphique: Espace de travail de l'application}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Présentation du GUI de l’application}
+\begin{figure}
+ \includegraphics[width=1\linewidth]{filmall.png}
+\caption{Interface graphique: Espace de travail de l'application}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]{Présentation du GUI de l’application}
+\begin{figure}
+ \includegraphics[width=1\linewidth]{import.png}
+\caption{Interface graphique: Importation d'un projet}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Présentation du GUI de l’application}
+\begin{figure}
+ \includegraphics[width=1\linewidth]{attention.png}
+\caption{Interface graphique: Importation d'un projet}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Présentation du GUI de l’application}
+\begin{figure}
+ \includegraphics[width=1\linewidth]{imported.png}
+\caption{Interface graphique: Importation d'un projet}
+\end{figure}
+\end{frame}
+
+\section{Démonstration}
+
+\section{Conclusion}
+
+\begin{frame}{Summary}
+  Le source du projet et la présentation sont disponibles sur le lien:
+  \begin{center}\url{https://github.com/AsmaBRZ/3I013-BEBOP2-PILOTING}\end{center}
+ \begin{center}
+ \begin{figure}
+ \includegraphics[width=0.1\linewidth]{github.png}
+ \end{figure}
+ \end{center}
+
+\end{frame}
+\begin{frame}
+\begin{figure}
+ \includegraphics[width=0.7\linewidth]{questions.jpg}
+ \\
+ \textbf{Des questions?} 
+\end{figure}
+\end{frame}
+\end{document}
+
+              
+            	
